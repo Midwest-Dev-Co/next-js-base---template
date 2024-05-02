@@ -3,18 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@plaiceholder/next": "^3.0.0",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.372.0",
+    "lucide-react": "^0.376.0",
     "next": "14.2.2",
+    "next-themes": "^0.3.0",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "sonner": "^1.4.41"
+    "sharp": "^0.33.3",
+    "sonner": "^1.4.41",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
