@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
 // * Props
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
 export default function SimpleContainer({ children, className }: IProps) {
   // * Render
   return (
-    <div className={clsx('relative mx-auto px-4 sm:px-6 lg:px-8', className)}>
+    <div className={cn('relative mx-auto px-4 sm:px-6 lg:px-8', className)}>
       {children}
     </div>
   );

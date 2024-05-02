@@ -1,5 +1,5 @@
 import { TSize } from '@/assets/typescript/ui';
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 
 // * Props
 interface IProps {
@@ -19,7 +19,7 @@ export default function LoadingDots({ size = 'md' }: IProps) {
 
   // * Render
   return (
-    <span className={clsx('inline-flex items-center', sizes[size])}>
+    <span className={cn('inline-flex items-center', sizes[size])}>
       <span className="dot" />
       <span className="dot" />
       <span className="dot" />

@@ -1,6 +1,6 @@
 'use client';
 
-import { Toaster } from 'sonner';
+import { Toaster } from '../ui/Toaster';
 
 // * Component: Toast
 export default function Toast() {
