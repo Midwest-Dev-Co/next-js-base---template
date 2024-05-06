@@ -1,6 +1,5 @@
 // * Styles
 import '@/assets/styles/globals.css';
-import clsx from 'clsx';
 
 // * Imports
 // Next
@@ -13,9 +12,10 @@ import { defaultMetadata } from './defaultMetadata';
 // Fonts
 import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
+import { cn } from '@/lib/utils';
 
 // * Dynamic Imports
-const Toast = dynamic(() => import('@/components/global/Toast'), {
+const Toaster = dynamic(() => import('@/components/ui/Toaster'), {
   ssr: false,
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: IProps) {
   return (
     <html
       lang="en"
-      className={clsx(inter.variable, baskervville.variable, lexend.variable)}
+      className={cn(inter.variable, baskervville.variable, lexend.variable)}
     >
       <body suppressHydrationWarning>
         {/* Children */}
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: IProps) {
         {/* {modal} */}
 
         {/* Toast Container */}
-        <Toast />
+        <Toaster />
 
         {/* Analytics */}
         {/* <Analytics /> */}

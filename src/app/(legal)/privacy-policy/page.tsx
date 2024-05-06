@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
         Privacy Policy
       </h1>
       <p className="text-lg leading-6 text-center text-slate-500">
-        Last updated: October 06, 2023
+        Last updated: {new Date().toLocaleDateString()}
       </p>
       <p className="text-lg leading-6 text-center text-slate-500">
         This Privacy Policy describes Our policies and procedures on the

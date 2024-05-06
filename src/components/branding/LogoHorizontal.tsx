@@ -8,7 +8,7 @@ export default function LogoHorizontal() {
   return (
     <Image
       className="h-6 w-auto"
-      src={LogoHorizontalIcon}
+      src={LogoHorizontalIcon || ''}
       alt={process.env.NEXT_PUBLIC_COMPANY_NAME || 'logo'}
       priority
     />

@@ -18,7 +18,7 @@ export default function SimpleFooter() {
 
       {/* Address */}
       <div className="mt-4 text-center text-xs leading-5 text-slate-500 italic">
-        <p>2028 Walden Pond Way</p>
+        <p>338 Broadway St, Ste 403</p>
         <p>Cape Girardeau, MO 63701</p>
         <p>United States of America</p>
       </div>

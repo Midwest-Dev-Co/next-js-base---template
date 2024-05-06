@@ -33,8 +33,6 @@ export const defaultMetadata: Metadata = {
   description,
   applicationName: title,
   creator: 'Midwest Dev Co, LLC',
-  colorScheme: 'only light',
-  themeColor: '#344764',
   assets: '/static',
   metadataBase: new URL(baseUrl),
   alternates: {

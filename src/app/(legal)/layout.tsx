@@ -4,6 +4,7 @@ import Link from 'next/link';
 import LogoSquare from '@/components/branding/LogoSquare';
 import SimpleFooter from '@/components/global/SimpleFooter';
 import SimpleContainer from '@/components/global/SimpleContainer';
+import Main from '@/components/global/Main';
 
 export default function LegalLayout({ children }: PropsWithChildren) {
   return (
@@ -24,11 +25,7 @@ export default function LegalLayout({ children }: PropsWithChildren) {
         </nav>
       </header>
 
-      <main className="my-24 relative">
-        <SimpleContainer className="max-w-5xl space-y-6">
-          {children}
-        </SimpleContainer>
-      </main>
+      <Main className="my-24 relative max-w-5xl space-y-6">{children}</Main>
 
       <SimpleFooter />
     </>
