@@ -7,7 +7,14 @@ export default function TermsOfService() {
         Terms of Service
       </h1>
       <p className="text-lg leading-6 text-center text-slate-500">
-        Last updated: {new Date().toLocaleDateString()}
+        Last updated:{' '}
+        {new Date(
+          new Date().setMonth(new Date().getMonth() - 1),
+        ).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
       </p>
       <p className="text-lg leading-6 text-center text-slate-500">
         Please read these terms and conditions carefully before using Our
@@ -42,15 +49,15 @@ export default function TermsOfService() {
         </li>
         <li>
           <p>
-            <strong>Country</strong> refers to: Missouri, United States
+            <strong>Country</strong> refers to: TSKSTATE, TSKCOUNTRY
           </p>
         </li>
         <li>
           <p>
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to Atlas Automations LLC, 2028 Walden Pond
-            Way 200, Cape Girardeau, MO 63701.
+            this Agreement) refers to TSKCOMPANY (TSKADDRESSLINE1
+            TSKADDRESSLINE2, TSKCITY, TSKSTATE, TSKZIP).
           </p>
         </li>
         <li>
@@ -90,14 +97,13 @@ export default function TermsOfService() {
         </li>
         <li>
           <p>
-            <strong>Website</strong> refers to Agile Acquisition, accessible
-            from{' '}
+            <strong>Website</strong> refers to TSKCOMPANY, accessible from{' '}
             <a
-              href="https://www.agileacquisition.co"
+              href="https://www.TSKDOMAIN.com"
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://www.agileacquisition.co
+              https://www.TSKDOMAIN.com
             </a>
           </p>
         </li>
@@ -334,7 +340,7 @@ export default function TermsOfService() {
         contact us:
       </p>
       <ul>
-        <li>By email: william@agileacquisition.co</li>
+        <li>By email: TSKEMAIL</li>
       </ul>
     </>
   );

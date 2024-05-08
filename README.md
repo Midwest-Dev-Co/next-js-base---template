@@ -1,29 +1,102 @@
 # NextJS Template
 
-## How To Use
+## Project Setup
 
-1. Clone the repository
-2. Run `yarn`
-3. Start the development server by running `yarn dev`.
+### Installation
 
-## Using Shadcn UI Components
+1. Use the template to create a new repository.
+2. Clone the repository to your local machine.
+3. Open the project in your code editor.
+4. Run `yarn`
+   - If you haven't globally installed the `yarn` package manager, you can do so by running `npm install -g yarn`.
 
-Since Shadcn UI is pre-installed, you can directly use its components to build your user interface. Here's how to integrate Shadcn UI components into your NextJS pages or components:
+### Environment Variables
 
-1. Import the UI components you need. For example, to use a button component, you can do the following:
+1. Create a `.env.development` file in the root of the project.
+2. Add the following environment variables to the `.env.development` file:
 
-   ```tsx
-   import { Button } from '@components/ui/button';
+```env
+NEXT_PUBLIC_VERCEL_URL="http://localhost:3000"
+NEXT_PUBLIC_COMPANY_NAME="TSKCOMPANY"
+```
 
-   function HomePage() {
-     return <Button>Click Me</Button>;
-   }
-   ```
+### Deployment
 
-2. If you need a component visit [Shadcn UI](https://ui.shadcn.com/docs/components/accordion) and follow the installation instructions for the component you need.
-3. For documentation on a component from Shadcn UI visit their website, find the component, and view the API Reference.
+_Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (will@midwestdevco.com)._
 
-## Using the LazyImage Component
+1. Create a new project on Vercel using the CLI by running `vercel` and following the prompts.
+   - If you haven't globally installed the `vercel` CLI, you can do so by running `yarn global add vercel`.
+2. Connect the repository to the Vercel project.
+3. Deploy the project.
+4. Add the environment variables to the Vercel project.
+
+### Assets
+
+_Note: All assets should be stored in the `/assets/**/*` directory._
+
+1. Add all images, illustrations, and icons to the `/assets/images` directory.
+   - All assets for a company will be found in our [Google Drive](https://drive.google.com/drive/my-drive) for that client.
+   - To create a logo, use [Canva](https://www.canva.com/), [Figma](https://www.figma.com/), or [ChatGPT Logo Extension](https://www.openai.com/chatgpt/).
+2. Create a favicon using [Real Favicon Generator](https://realfavicongenerator.net/) and add it to the `/assets/icons/favicon` directory.
+3. Rename the `apple-touch-icon.png` to `apple-icon.png` and the `favicon-512x512.png` to `icon.png`.
+4. Create a maskable icon using [Maskable](https://maskable.app/editor), save it as 512x512, and add it to the `/assets/icons/favicon` directory and rename it to `maskable_icon.png`.
+5. Move the `favicon.ico`, `apple-icon.png`, `icon.png`, and `maskable_icon.png` files to the `/app` directory.
+
+## Information
+
+1. Search for `TODO` in the project to find areas that need to be updated.
+2. Search for `TSKCOMPANY` in the project to find areas that need to be updated.
+3. Search for `TSKCOLOR` in the project to find areas that need to be updated.
+4. Search for `TSKEMAIL` in the project to find areas that need to be updated.
+5. Search for `TSKDOMAIN` in the project to find areas that need to be updated.
+6. Search for `TSKSLOGAN` in the project to find areas that need to be updated.
+7. Search for `TSKDESCRIPTION` in the project to find areas that need to be updated.
+8. Search for `TSKADDRESSLINE1`, etc. in the project to find areas that need to be updated.
+9. Update the [manifest.json](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/manifest) file with the correct information.
+10. Update the [robots.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots) file with the correct information.
+11. Update the [sitemap.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#sitemap-files-xml) file with the correct information.
+
+## Optimization
+
+### Image Optimization
+
+1. Use [TinyPNG](https://tinypng.com/) or [Squoosh](https://squoosh.app/) to compress images.
+2. Use the `LazyImage` component to lazy load images.
+3. Use the `Image` component with the `loading="lazy"` attribute to lazy load images.
+
+- Metadata
+
+  - Update Title
+  - Update Description
+  - Update Keywords
+  - ...
+  - https://metatags.io/
+
+---
+
+## Creating & Styling Components
+
+### Pre-Built Components
+
+#### Main (/components/global/Main.tsx)
+
+- Whenever a layout or page needs to be wrapped in a main tag, use the Main component.
+- The Main component takes in a children prop which is the content that will be wrapped in the main tag.
+
+```tsx
+<Main className="my-24 relative max-w-5xl space-y-6">{children}</Main>
+```
+
+#### Section (/components/global/Section.tsx)
+
+- Whenever a layout or page needs to be wrapped in a section tag, use the Section component. It will keep spacing consistent throughout the application.
+- The Section component takes in a children prop which is the content that will be wrapped in the section tag.
+
+```tsx
+<Section className="bg-slate-900">{children}</Section>
+```
+
+#### LazyImage (/components/ui/LazyImage.tsx)
 
 1. Import the LazyImage Component into the component you would like to have the image.
 
@@ -81,11 +154,107 @@ export default function LandingPage() {
 }
 ```
 
+### Shadcn UI Components
+
+Since Shadcn UI is pre-installed, you can directly use its components to build your user interface. Here's how to integrate Shadcn UI components into your NextJS pages or components:
+
+1. Import the UI components you need. For example, to use a button component, you can do the following:
+
+   ```tsx
+   import { Button } from '@components/ui/button';
+
+   function HomePage() {
+     return <Button>Click Me</Button>;
+   }
+   ```
+
+2. If you need a component visit [Shadcn UI](https://ui.shadcn.com/docs/components/accordion) and follow the installation instructions for the component you need.
+3. For documentation on a component from Shadcn UI visit their website, find the component, and view the API Reference.
+
+### Other Considerations
+
+#### Icons
+
+1. Use the [Lucid Icons](https://lucide.dev/icons/) library to add icons to your application.
+
+#### Color Palettes
+
+- https://coolors.co/
+- https://colorhunt.co/
+
+#### Fonts
+
+- https://fonts.google.com/
+
+#### Illustrations
+
+- https://undraw.co/
+- https://www.drawkit.io/
+- https://www.humaaans.com/
+- https://www.opendoodles.com/
+- https://www.manypixels.co/gallery/
+- https://www.pixeltrue.com/free-illustrations
+- https://www.illlustrations.co/
+
+#### SEO
+
+- https://www.semrush.com/
+- https://www.ahrefs.com/
+- https://neilpatel.com/seo-analyzer/
+
+#### Accessibility
+
+- https://wave.webaim.org/
+- https://www.tpgi.com/axe/
+- LightHouse
+
+#### Performance
+
+- https://web.dev/measure/
+- https://gtmetrix.com/
+- https://www.webpagetest.org/
+
+---
+
 ## Features
+
+- [x] Landing Page
+- [x] Terms and Conditions Page
+- [x] Privacy Policy Page
+- [~] Support Page
+- [x] Logo Components
+
+---
+
+## Technologies
+
+- [x] NextJS
+- [x] TypeScript
+- [x] Tailwind CSS
+- [x] Shadcn UI
+- [x] Lucide Icons
+
+---
 
 ## Todo
 
+- [ ] Add Contact Page
+- [ ] Add Blogs & Blog Pages
+- [ ] Add About Page
+- [ ] Add Stripe
+- [ ] Add SendGrid
 - [ ] Add Analytics / Clearbit
 - [ ] Add Exit Intent Popup
 - [ ] Add Chatbot
-- [ ]
+- [ ] Add Recommended Extensions
+- [ ] DOCS: Vercel Deployment and Environment Variables
+- [ ] DOCS: Image Optimization
+- [ ] DOCS: How to create a new file
+  - Naming Convensions
+  - Comments
+  - Imports
+  - Exports
+  - Component Structure
+  - Props
+
+---

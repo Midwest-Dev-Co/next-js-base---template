@@ -12,15 +12,22 @@ export default function SimpleFooter() {
 
       {/* Copyright */}
       <p className="mt-8 text-center text-xs leading-5 text-slate-700">
-        &copy; {new Date().getFullYear()} Midwest Dev Co, LLC. All rights
-        reserved.
+        &copy;{' '}
+        {new Date(
+          new Date().setMonth(new Date().getMonth() - 1),
+        ).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}{' '}
+        - TSKCOMPANY. All rights reserved.
       </p>
 
       {/* Address */}
       <div className="mt-4 text-center text-xs leading-5 text-slate-500 italic">
-        <p>338 Broadway St, Ste 403</p>
-        <p>Cape Girardeau, MO 63701</p>
-        <p>United States of America</p>
+        <p>TSKADDRESSLINE1, TSKADDRESSLINE2</p>
+        <p>TSKCITY, TSKSTATEINITIALS TSKZIP</p>
+        <p>TSKCOUNTRY</p>
       </div>
 
       {/* Legal Docs */}

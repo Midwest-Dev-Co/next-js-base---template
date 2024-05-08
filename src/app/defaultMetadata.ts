@@ -1,28 +1,34 @@
 import { Metadata } from 'next';
 
-const title = 'TSK | ' + process.env.NEXT_PUBLIC_COMPANY_NAME;
-const description = 'TSK.';
-const baseUrl = 'https://tsk.com';
+const title = 'TSKSLOGAN | ' + process.env.NEXT_PUBLIC_COMPANY_NAME;
+const description = 'TSKDESCRIPTION';
+const baseUrl = 'https://TSKDOMAIN.com';
 
 const images = [
   {
-    url: '/static/brand/logo-pattern.jpg',
-    alt: 'TSK Brand Pattern',
-    width: 3840,
-    height: 2160,
+    url: '/maskable_icon.png',
+    alt: 'TSKCOMPANY Logo',
+    width: 512,
+    height: 512,
   },
-  {
-    url: '/static/brand/og-facebook.jpg',
-    alt: 'TSK Facebook Cover',
-    width: 2460,
-    height: 1110,
-  },
-  {
-    url: '/static/brand/og-twitter.jpg',
-    alt: 'TSK Twitter Cover',
-    width: 4500,
-    height: 1500,
-  },
+  // {
+  //   url: '/static/brand/logo-pattern.jpg',
+  //   alt: 'TSK Brand Pattern',
+  //   width: 3840,
+  //   height: 2160,
+  // },
+  // {
+  //   url: '/static/brand/og-facebook.jpg',
+  //   alt: 'TSK Facebook Cover',
+  //   width: 2460,
+  //   height: 1110,
+  // },
+  // {
+  //   url: '/static/brand/og-twitter.jpg',
+  //   alt: 'TSK Twitter Cover',
+  //   width: 4500,
+  //   height: 1500,
+  // },
 ];
 
 export const defaultMetadata: Metadata = {
@@ -49,39 +55,30 @@ export const defaultMetadata: Metadata = {
   bookmarks: [baseUrl + '/'],
   openGraph: {
     type: 'website',
-    siteName: 'TSK',
+    siteName: 'TSKCOMPANY',
     title,
     description,
     url: baseUrl,
     images,
     locale: 'en_US',
     countryName: 'United States',
-    emails: [
-      'will@midwestdevco.com',
-      'joe@midwestdevco.com',
-      'joseph@midwestdevco.com',
-      'trace@midwestdevco.com',
-    ],
+    emails: ['TSKEMAIL'],
     ttl: 60 * 60 * 24 * 7, // 1 week
   },
   icons: {
     icon: [
-      { url: '/static/favicon/maskable_icon.png' },
-      new URL('/static/favicon/maskable_icon.png', baseUrl).toString(),
+      { url: '/maskable_icon.png' },
+      new URL('/maskable_icon.png', baseUrl).toString(),
     ],
     apple: '/apple-icon.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/static/favicon/apple-touch-icon.png',
-    },
   },
-  twitter: {
-    card: 'summary_large_image',
-    creator: '@midwestdevco',
-    title,
-    description,
-    images,
-  },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   creator: '@midwestdevco',
+  //   title,
+  //   description,
+  //   images,
+  // },
   robots: {
     follow: true,
     index: true,

@@ -13,6 +13,7 @@ import { defaultMetadata } from './defaultMetadata';
 import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
 import { cn } from '@/lib/utils';
+import { Viewport } from 'next';
 
 // * Dynamic Imports
 const Toaster = dynamic(() => import('@/components/ui/Toaster'), {
@@ -49,5 +50,9 @@ export default function RootLayout({ children }: IProps) {
   );
 }
 
-// * Metadata
+// * Metadata & Viewport
+export const viewport: Viewport = {
+  themeColor: '#FFFFFF', // TSKCOLOR
+};
+
 export const metadata = defaultMetadata;
