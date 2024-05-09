@@ -10,25 +10,22 @@
 4. Run `yarn`
    - If you haven't globally installed the `yarn` package manager, you can do so by running `npm install -g yarn`.
 
-### Environment Variables
-
-1. Create a `.env.development` file in the root of the project.
-2. Add the following environment variables to the `.env.development` file:
-
-```env
-NEXT_PUBLIC_VERCEL_URL="http://localhost:3000"
-NEXT_PUBLIC_COMPANY_NAME="TSKCOMPANY"
-```
-
 ### Deployment
 
 _Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (will@midwestdevco.com)._
 
-1. Create a new project on Vercel using the CLI by running `vercel` and following the prompts.
+1. Initialize the project with Vercel by running `yarn vercel-int`. This will take you through a series of prompts to set up your project.
    - If you haven't globally installed the `vercel` CLI, you can do so by running `yarn global add vercel`.
-2. Connect the repository to the Vercel project.
-3. Deploy the project.
-4. Add the environment variables to the Vercel project.
+   - Login = Enter
+   - Select Project = Enter
+   - Link to Existing Project = N
+   - What's your project's name? = Enter
+   - In which directory is your code located? = Enter
+   - Want to override the settings? = N
+   - Wait for the project to deploy.
+   - What's the value of NEXT_PUBLIC_VERCEL_URL? = https://localhost:3000
+   - What's the value of NEXT_PUBLIC_COMPANY_NAME? = TSKCOMPANY (whatever the name is)
+   - What Environments for NEXT_PUBLIC_COMPANY_NAME? = a (for all) -> enter
 
 ### Assets
 
