@@ -246,6 +246,7 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [ ] Add Analytics / Clearbit
 - [ ] Add Exit Intent Popup
 - [ ] Add Chatbot
+- [ ] Add Analytics (Next/Vercel)
 - [ ] Add Recommended Extensions
 - [ ] DOCS: Vercel Deployment and Environment Variables
 - [ ] DOCS: Image Optimization

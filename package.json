@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "vercel env pull && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-init": "vercel login && vercel && vercel git connect && vercel env add NEXT_PUBLIC_VERCEL_URL && vercel env add NEXT_PUBLIC_COMPANY_NAME"
+    "vercel-init": "vercel login && vercel && vercel git connect && vercel env add NEXT_PUBLIC_VERCEL_URL development && vercel env add NEXT_PUBLIC_COMPANY_NAME"
   },
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",

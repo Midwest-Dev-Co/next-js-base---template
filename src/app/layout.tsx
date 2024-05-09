@@ -23,11 +23,11 @@ const Toaster = dynamic(() => import('@/components/ui/Toaster'), {
 // * Props
 interface IProps {
   children: React.ReactNode;
-  // modal: React.ReactNode;
+  modal: React.ReactNode;
 }
 
 // * Component
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout({ children, modal }: IProps) {
   return (
     <html
       lang="en"
