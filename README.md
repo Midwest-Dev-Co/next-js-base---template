@@ -215,13 +215,13 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 
 ## Features
 
-- [x] Landing Page w/ Component Structure
+- [x] Landing Page (Component Structure)
 - [x] Terms and Conditions Page
 - [x] Privacy Policy Page
 - [x] Logo Components
-- [~] Support Page
-- [ ] Contact Page
-- [ ] About Page
+- [x] Contact Page (Component Structure)
+- [x] About Page (Component Structure)
+- [x] Support Page (Component Structure)
 - [ ] Blogs & Blog Pages
 - [ ] Exit Intent Popup
 - [ ] Chatbot
