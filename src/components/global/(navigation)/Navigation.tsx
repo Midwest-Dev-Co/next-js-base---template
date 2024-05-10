@@ -8,8 +8,10 @@ export default function Navigation() {
         aria-label="Global"
       >
         {/* Desktop Navigation */}
+        <h2>Desktop Nav</h2>
 
         {/* Mobile Navigation */}
+        <h2>Mobile Nav</h2>
       </nav>
     </header>
   );

@@ -218,8 +218,15 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [x] Landing Page
 - [x] Terms and Conditions Page
 - [x] Privacy Policy Page
-- [~] Support Page
 - [x] Logo Components
+- [~] Support Page
+- [ ] Contact Page
+- [ ] About Page
+- [ ] Blogs & Blog Pages
+- [ ] Exit Intent Popup
+- [ ] Chatbot
+- [ ] Newsletter Signup
+- [ ] Optimized SEO
 
 ---
 
@@ -230,29 +237,31 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [x] Tailwind CSS
 - [x] Shadcn UI
 - [x] Lucide Icons
+- [ ] CMS
+- [ ] Next Theme
+- [ ] Stripe
+- [ ] SendGrid
+- [ ] Calendly
+- [ ] Analytics (Vercel)
+- [ ] Clearbit
 
 ---
 
-## Todo
+## Docs / Dev Environment
 
-- [ ] Add Contact Page
-- [ ] Add Blogs & Blog Pages
-- [ ] Add About Page
-- [ ] Add Stripe
-- [ ] Add SendGrid
-- [ ] Add Analytics / Clearbit
-- [ ] Add Exit Intent Popup
-- [ ] Add Chatbot
-- [ ] Add Analytics (Next/Vercel)
-- [ ] Add Recommended Extensions
-- [ ] DOCS: Vercel Deployment and Environment Variables
-- [ ] DOCS: Image Optimization
-- [ ] DOCS: How to create a new file
+- [x] Vercel Deployment and Environment Variables
+- [x] Image Optimization
+- [ ] Recommended Extensions
+- [ ] New File Creation (Component, Page, etc. w/ Snippets)
   - Naming Convensions
   - Comments
   - Imports
   - Exports
   - Component Structure
   - Props
-
----
+- [ ] Testing Performance & Accessibility (Lighthouse, GTMetrix, WebPageTest)
+- [ ] Fonts & Typography
+- [ ] SEO Optimization
+- [ ] Analytics & Tracking
+- [ ] Security & Privacy
+- [ ]

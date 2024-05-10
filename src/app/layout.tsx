@@ -14,6 +14,8 @@ import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
 import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
+import Navigation from '@/components/global/(navigation)/Navigation';
+import Footer from '@/components/global/(footer)/Footer';
 
 // * Dynamic Imports
 const Toaster = dynamic(() => import('@/components/ui/Toaster'), {
@@ -34,8 +36,14 @@ export default function RootLayout({ children, modal }: IProps) {
       className={cn(inter.variable, baskervville.variable, lexend.variable)}
     >
       <body suppressHydrationWarning>
+        {/* Navigation */}
+        <Navigation />
+
         {/* Children */}
         {children}
+
+        {/* Footer */}
+        <Footer />
 
         {/* Modal */}
         {/* {modal} */}
