@@ -215,7 +215,7 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 
 ## Features
 
-- [x] Landing Page
+- [x] Landing Page w/ Component Structure
 - [x] Terms and Conditions Page
 - [x] Privacy Policy Page
 - [x] Logo Components
@@ -251,7 +251,7 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 
 - [x] Vercel Deployment and Environment Variables
 - [x] Image Optimization
-- [ ] Recommended Extensions
+- [x] Recommended Extensions
 - [ ] New File Creation (Component, Page, etc. w/ Snippets)
   - Naming Convensions
   - Comments
@@ -263,5 +263,3 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [ ] Fonts & Typography
 - [ ] SEO Optimization
 - [ ] Analytics & Tracking
-- [ ] Security & Privacy
-- [ ]
