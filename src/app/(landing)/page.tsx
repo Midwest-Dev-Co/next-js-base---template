@@ -7,11 +7,15 @@ import CTA from './CTA';
 import Articles from './Articles';
 import Contact from './Contact';
 import About from './About';
+import FAQ from './FAQ';
+import BrandCloud from './BrandCloud';
 
 export default function LandingPage() {
   return (
     <Main>
       <Hero />
+
+      <BrandCloud />
 
       <About />
 
@@ -21,9 +25,11 @@ export default function LandingPage() {
 
       <Testimonials />
 
+      <Articles />
+
       <CTA />
 
-      <Articles />
+      <FAQ />
 
       <Contact />
     </Main>
