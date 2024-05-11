@@ -93,34 +93,34 @@ _Note: All assets should be stored in the `/assets/**/*` directory._
 <Section className="bg-slate-900">{children}</Section>
 ```
 
-#### LazyImage (/components/ui/LazyImage.tsx)
+#### LazyRemoteImage/LazyLocalImage (/components/ui/LazyRemoteImage.tsx) (/components/ui/LazyLocalImage.tsx)
 
-1. Import the LazyImage Component into the component you would like to have the image.
+1. Import the LazyRemoteImage or LazyLocalImage Component into the component you would like to have the image.
 
 ```tsx
-import LazyImage from '@/components/ui/LazyImage';
+import LazyRemoteImage from '@/components/ui/LazyRemoteImage';
 
 export default function LandingPage() {
   return (
     <main>
-      <LazyImage />
+      <LazyRemoteImage />
     </main>
   );
 }
 ```
 
 2. Make sure to add the required fields for the image component which are the src, alt, width, and height.
-   The LazyImage component can take it two types of sources it can be a url to an external image or a static import to a local image.
+   The LazyRemoteImage component can take in a string value for the remote image. The LazyLocalImage can take in a static import for the value of the src
 
 - External Image
 
 ```tsx
-import LazyImage from '@/components/ui/LazyImage';
+import LazyRemoteImage from '@/components/ui/LazyRemoteImage';
 
 export default function LandingPage() {
   return (
     <main>
-      <LazyImage
+      <LazyRemoteImage
         src="https://images.unsplash.com/......."
         alt="Background Image"
         width={400}
@@ -134,13 +134,13 @@ export default function LandingPage() {
 - Local Image
 
 ```tsx
-import LazyImage from '@/components/ui/LazyImage';
+import LazyLocalImage from '@/components/ui/LazyLocalImage';
 import ImageYouAreImporting from '@/assets/images/niceimage.png';
 
 export default function LandingPage() {
   return (
     <main>
-      <LazyImage
+      <LazyLocalImage
         src={ImageYouAreImporting}
         alt="Your Image"
         width={ImageYouAreImporting.width}
