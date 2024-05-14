@@ -1,7 +1,7 @@
 import Main from '@/components/global/Main';
 import Hero from './Hero';
 import Services from './Services';
-import Projects from './Projects';
+import Portfolio from './Portfolio';
 import Testimonials from './Testimonials';
 import CTA from './CTA';
 import Articles from './Articles';
@@ -21,7 +21,7 @@ export default function LandingPage() {
 
       <Services />
 
-      <Projects />
+      <Portfolio />
 
       <Testimonials />
 

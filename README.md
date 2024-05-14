@@ -14,7 +14,7 @@
 
 _Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (will@midwestdevco.com)._
 
-1. Initialize the project with Vercel by running `yarn vercel-int`. This will take you through a series of prompts to set up your project.
+1. Initialize the project with Vercel by running `yarn vercel-init`. This will take you through a series of prompts to set up your project.
    - If you haven't globally installed the `vercel` CLI, you can do so by running `yarn global add vercel`.
    - Login = Enter
    - Select Project = Enter
