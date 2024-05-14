@@ -37,7 +37,7 @@
   }
 
   body {
-    @apply flex flex-col min-h-screen bg-background text-foreground h-full relative antialiased;
+    @apply flex flex-col min-h-screen bg-background text-foreground h-full relative antialiased scroll-smooth;
   }
 }
 
