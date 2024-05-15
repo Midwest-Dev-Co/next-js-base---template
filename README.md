@@ -1,4 +1,4 @@
-# NextJS Template
+# TSKCOMPANY
 
 ## Project Setup
 
@@ -23,7 +23,7 @@ _Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (w
    - In which directory is your code located? = Enter
    - Want to override the settings? = N
    - Wait for the project to deploy.
-   - What's the value of NEXT_PUBLIC_VERCEL_URL? = https://localhost:3000
+   - What's the value of NEXT_PUBLIC_VERCEL_URL? = http://localhost:3000
    - What's the value of NEXT_PUBLIC_COMPANY_NAME? = TSKCOMPANY (whatever the name is)
    - What Environments for NEXT_PUBLIC_COMPANY_NAME? = a (for all) -> enter
 

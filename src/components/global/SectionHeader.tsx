@@ -21,7 +21,7 @@ export default function SectionHeader({
   return (
     <header
       className={cn(
-        'px-6 pb-24 sm:pb-32 max-w-2xl',
+        'px-6 pb-16 sm:pb-24 max-w-2xl',
         isCentered ? 'mx-auto text-center' : 'text-left',
         className,
       )}
