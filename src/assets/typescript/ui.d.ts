@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export type TSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TVariant = 'primary' | 'secondary' | 'dark' | 'light';
 export type TFill = 'solid' | 'outline' | 'gradient' | 'none';
@@ -34,4 +36,17 @@ export type ITailwindColor =
   | 'amber'
   | 'sky'
   | 'mint'
-  | 'royal';
+  | 'royal'
+  | 'palette-1'
+  | 'palette-2'
+  | 'palette-3'
+  | 'palette-4'
+  | 'palette-5'
+  | 'palette-6';
+
+export interface IImage {
+  name: string;
+  href: string;
+  src: StaticImageData;
+  alt: string;
+}

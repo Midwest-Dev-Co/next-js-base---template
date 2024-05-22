@@ -1,4 +1,4 @@
-import LoadingShapes from '@/components/ux/LoadingShapes';
+import LoadingShapes from '@/components/UI/Loading/LoadingShapes';
 
 // * Component
 export default function RootLoading() {

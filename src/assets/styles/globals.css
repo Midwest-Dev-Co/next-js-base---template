@@ -25,19 +25,18 @@
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
-  html {
-    @apply scroll-smooth h-full;
+  html,
+  body {
+    @apply h-full scroll-smooth antialiased;
   }
 
   body {
-    @apply flex flex-col min-h-screen bg-background text-foreground h-full relative antialiased scroll-smooth;
+    @apply relative flex flex-col min-h-screen bg-background text-foreground;
   }
 }
 
@@ -48,6 +47,16 @@
 }
 
 @layer utilities {
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .color-transition {
     @apply transition-colors duration-300 ease-in-out;
   }

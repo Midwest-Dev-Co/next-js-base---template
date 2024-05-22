@@ -173,6 +173,7 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 #### Icons
 
 1. Use the [Lucid Icons](https://lucide.dev/icons/) library to add icons to your application.
+2. [Temporary Logos](https://logoipsum.com/category/circular)
 
 #### Color Palettes
 
@@ -263,3 +264,32 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [ ] Fonts & Typography
 - [ ] SEO Optimization
 - [ ] Analytics & Tracking
+
+## Domains
+
+- TSKDOMAIN
+
+## About Them
+
+TSKABOUT
+
+## Vibe
+
+- TSKVIBE
+
+## Inspiration
+
+- TSKINSPIRATION
+
+## Press
+
+- PUBLICATION: [TSK](TSKLINK)
+- INTERVIEW: [TSK](TSKLINK)
+
+## Ideas
+
+- TSK
+
+## Contact
+
+- TSKEMAIL

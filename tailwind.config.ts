@@ -81,6 +81,8 @@ const config: Config = {
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
     plugin(({ addVariant }) => addVariant('hocus', ['&:hover', '&:focus'])),
     plugin(({ addVariant }) => addVariant('around', ['&:before', '&:after'])),
   ],

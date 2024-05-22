@@ -6,7 +6,7 @@ const baseUrl = 'https://TSKDOMAIN.com';
 
 const images = [
   {
-    url: '/maskable_icon.png',
+    url: '/static/famaskable_icon.png',
     alt: 'TSKCOMPANY Logo',
     width: 512,
     height: 512,
@@ -47,7 +47,7 @@ export const defaultMetadata: Metadata = {
       'en-US': '/',
     },
   },
-  //   manifest: '/manifest.json',
+  manifest: '/manifest.json',
   keywords: [
     // TODO: General Keywords
     // TODO: Long-tail keywords
@@ -67,10 +67,10 @@ export const defaultMetadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/maskable_icon.png' },
-      new URL('/maskable_icon.png', baseUrl).toString(),
+      { url: '/static/favicon/maskable_icon.png' },
+      new URL('/static/favicon/maskable_icon.png', baseUrl).toString(),
     ],
-    apple: '/apple-icon.png',
+    apple: '/static/favicon/apple-icon.png',
   },
   // twitter: {
   //   card: 'summary_large_image',
