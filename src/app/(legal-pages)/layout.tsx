@@ -2,8 +2,8 @@ import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 
 import LogoSquare from '@/components/UI/Logo/LogoSquare';
-import SimpleFooter from './LegalFooter';
 import Main from '@/components/Containers/Main';
+import SimpleFooter from './LegalFooter';
 
 export default function LegalLayout({ children }: PropsWithChildren) {
   return (

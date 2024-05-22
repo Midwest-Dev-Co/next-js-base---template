@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 
-import LogoSquareIcon from '@/assets/icons/brand/logo-square.svg'; // TODO
+import LogoSquareIcon from '@/assets/icons/logo/logo-square.svg'; // TODO
 import LazyImageLocal from '../../Containers/LazyImageLocal';
 
 // * Component: Logo

@@ -14,8 +14,8 @@ import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
 import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
-import Footer from '@/components/UI/Footer/Footer';
 import Navigation from '@/components/UI/Navigation/Navigation';
+import Footer from '@/components/UI/Footer/Footer';
 
 // * Dynamic Imports
 const Toaster = dynamic(() => import('@/components/Containers/Toaster'), {
