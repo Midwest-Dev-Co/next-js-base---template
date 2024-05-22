@@ -14,11 +14,11 @@ import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
 import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
-import Navigation from '@/components/UI/Navigation/Navigation';
-import Footer from '@/components/UI/Footer/Footer';
+import Navigation from '@/components/ui/navigation/Navigation';
+import Footer from '@/components/ui/footer/Footer';
 
 // * Dynamic Imports
-const Toaster = dynamic(() => import('@/components/Containers/Toaster'), {
+const Toaster = dynamic(() => import('@/components/containers/Toaster'), {
   ssr: false,
 });
 

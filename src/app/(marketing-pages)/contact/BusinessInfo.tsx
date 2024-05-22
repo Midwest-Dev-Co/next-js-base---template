@@ -1,4 +1,4 @@
-import Section from '@/components/Containers/Section';
+import Section from '@/components/containers/Section';
 
 export default function BusinessInfo() {
   return (

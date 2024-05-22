@@ -1,4 +1,4 @@
-import Main from '@/components/Containers/Main';
+import Main from '@/components/containers/Main';
 
 export default function ArticlesPage() {
   return (

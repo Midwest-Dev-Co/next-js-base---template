@@ -1,4 +1,4 @@
-import Main from '@/components/Containers/Main';
+import Main from '@/components/containers/Main';
 import Team from './Team';
 import Content from './Content';
 import Stats from './Stats';

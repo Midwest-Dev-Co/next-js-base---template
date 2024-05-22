@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 import LogoSquareIcon from '@/assets/icons/logo/logo-square.svg'; // TODO
-import LazyImageLocal from '../../Containers/LazyImageLocal';
+import LazyImageLocal from '../../containers/LazyImageLocal';
 
 // * Component: Logo
 export default function LogoSquare({ className = '' }: { className?: string }) {

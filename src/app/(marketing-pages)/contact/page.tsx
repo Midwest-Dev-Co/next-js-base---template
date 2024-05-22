@@ -1,6 +1,6 @@
-import Main from '@/components/Containers/Main';
 import ContactForm from './ContactForm';
 import BusinessInfo from './BusinessInfo';
+import Main from '@/components/containers/Main';
 
 export default function ContactPage() {
   return (

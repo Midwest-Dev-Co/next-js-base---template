@@ -1,5 +1,5 @@
 import LogoHorizontalIcon from '@/assets/icons/logo/logo-horizontal.svg'; // TODO
-import LazyImageLocal from '../../Containers/LazyImageLocal';
+import LazyImageLocal from '../../containers/LazyImageLocal';
 
 // * Component: Logo
 export default function LogoHorizontal() {

@@ -1,5 +1,5 @@
-import Section from '@/components/Containers/Section';
-import SectionHeader from '@/components/Containers/SectionHeader';
+import Section from '@/components/containers/Section';
+import SectionHeader from '@/components/containers/SectionHeader';
 
 export default function About() {
   return (
