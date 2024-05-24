@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-init": "vercel login && vercel && vercel git connect && vercel env add NEXT_PUBLIC_VERCEL_URL development && vercel env add NEXT_PUBLIC_COMPANY_NAME"
+    "vercel-init": "vercel login && vercel --scope midwest-dev-co --build-env NEXT_PUBLIC_VERCEL_URL=https://google.com && vercel git connect && vercel env add NEXT_PUBLIC_VERCEL_URL development && vercel env add NEXT_PUBLIC_COMPANY_NAME"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
