@@ -75,8 +75,8 @@ export default function PrivacyPolicy() {
           <p>
             <strong>Company</strong> (referred to as either &quot;the
             Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in
-            this Agreement) refers to TSKCOMPANY (TSKADDRESSLINE1
-            TSKADDRESSLINE2, TSKCITY, TSKSTATE, TSKZIP).
+            this Agreement) refers to {process.env.NEXT_PUBIC_COMPANY_NAME}{' '}
+            (TSKADDRESSLINE1 TSKADDRESSLINE2, TSKCITY, TSKSTATE, TSKZIP).
           </p>
         </li>
         <li>
@@ -135,13 +135,14 @@ export default function PrivacyPolicy() {
         </li>
         <li>
           <p>
-            <strong>Website</strong> refers to TSKCOMPANY, accessible from{' '}
+            <strong>Website</strong> refers to{' '}
+            {process.env.NEXT_PUBIC_COMPANY_NAME}, accessible from{' '}
             <a
-              href="https://www.TSKDOMAIN.com"
+              href={process.env.NEXT_PUBLIC_VERCEL_URL}
               rel="external nofollow noopener"
               target="_blank"
             >
-              https://www.TSKDOMAIN.com
+              process.env.NEXT_PUBLIC_VERCEL_URL
             </a>
           </p>
         </li>
@@ -601,7 +602,7 @@ export default function PrivacyPolicy() {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: TSKEMAIL</li>
+        <li>By email: {process.env.NEXT_PUBLIC_CONTACT_EMAIL}</li>
       </ul>
     </>
   );

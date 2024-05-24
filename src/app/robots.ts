@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://TSKDOMAIN.com/sitemap.xml',
+    sitemap: `${process.env.NEXT_PUBLIC_VERCEL_URL}/sitemap.xml`,
   };
 }

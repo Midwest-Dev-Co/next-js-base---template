@@ -10,7 +10,10 @@ export default function SupportPage() {
         className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16
 	  text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
       >
-        For support, please contact us at <a href="mailto:TSKEMAIL">TSKEMAIL</a>
+        For support, please contact us at{' '}
+        <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}>
+          {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
+        </a>
         .
       </p>
     </Section>

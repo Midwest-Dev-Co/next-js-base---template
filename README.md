@@ -24,7 +24,7 @@ _Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (w
    - Want to override the settings? = N
    - Wait for the project to deploy.
    - What's the value of NEXT_PUBLIC_VERCEL_URL? = http://localhost:3000
-   - What's the value of NEXT_PUBLIC_COMPANY_NAME? = TSKCOMPANY (whatever the name is)
+   - What's the value of NEXT_PUBLIC_COMPANY_NAME? = (whatever the name is)
    - What Environments for NEXT_PUBLIC_COMPANY_NAME? = a (for all) -> enter
 
 ### Assets
@@ -41,17 +41,24 @@ _Note: All assets should be stored in the `/assets/**/*` directory._
 
 ## Information
 
-1. Search for `TODO` in the project to find areas that need to be updated.
-2. Search for `TSKCOMPANY` in the project to find areas that need to be updated.
-3. Search for `TSKCOLOR` in the project to find areas that need to be updated.
-4. Search for `TSKEMAIL` in the project to find areas that need to be updated.
-5. Search for `TSKDOMAIN` in the project to find areas that need to be updated.
-6. Search for `TSKSLOGAN` in the project to find areas that need to be updated.
-7. Search for `TSKDESCRIPTION` in the project to find areas that need to be updated.
-8. Search for `TSKADDRESSLINE1`, etc. in the project to find areas that need to be updated.
-9. Update the [manifest.json](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/manifest) file with the correct information.
-10. Update the [robots.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots) file with the correct information.
-11. Update the [sitemap.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#sitemap-files-xml) file with the correct information.
+### Update ENV
+
+1. Add `NEXT_PUBLIC_VERCEL_URL` to the `.env` file by running `vercel env add NEXT_PUBLIC_BASE_URL`. This should be the URL of the deployed site for production.
+2. Add `NEXT_PUBLIC_CONTACT_EMAIL` to the `.env` file by running `vercel env add NEXT_PUBLIC_CONTACT_EMAIL`. This should be the email address that will be used for receiving contact forms (client's personal email address).
+3. Add `SENDGRID_EMAIL` to the `.env` file by running `vercel env add SENDGRID_EMAIL`. This should be the email address that will be used for sending emails.
+4. Add `SENDGRID_API_KEY` to the `.env` file by running `vercel env add SENDGRID_API_KEY`. This should be the API key for the SendGrid account.
+
+### Update Project
+
+4. Search for `TODO` in the project to find areas that need to be updated.
+5. Search for `TSKCOMPANY` in the project to find areas that need to be updated.
+6. Search for `TSKCOLOR` in the project to find areas that need to be updated.
+7. Search for `TSKSLOGAN` in the project to find areas that need to be updated.
+8. Search for `TSKDESCRIPTION` in the project to find areas that need to be updated.
+9. Search for `TSKADDRESSLINE1`, etc. in the project to find areas that need to be updated.
+10. Update the [manifest.json](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/manifest) file with the correct information.
+11. Update the [robots.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots) file with the correct information.
+12. Update the [sitemap.ts](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#sitemap-files-xml) file with the correct information.
 
 ## Optimization
 
@@ -238,10 +245,10 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 - [x] Tailwind CSS
 - [x] Shadcn UI
 - [x] Lucide Icons
-- [ ] CMS
+- [x] SendGrid
+- [ ] Payload (CMS)
 - [ ] Next Theme
 - [ ] Stripe
-- [ ] SendGrid
 - [ ] Calendly
 - [ ] Analytics (Vercel)
 - [ ] Clearbit
@@ -267,7 +274,7 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 
 ## Domains
 
-- TSKDOMAIN
+- process.env.NEXT_PUBLIC_VERCEL_URL
 
 ## About Them
 
@@ -292,4 +299,4 @@ TSKABOUT
 
 ## Contact
 
-- TSKEMAIL
+- process.env.NEXT_PUBLIC_CONTACT_EMAIL

@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 const title = 'TSKSLOGAN | ' + process.env.NEXT_PUBLIC_COMPANY_NAME;
 const description = 'TSKDESCRIPTION';
-const baseUrl = 'https://TSKDOMAIN.com';
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL!;
 
 const images = [
   {
-    url: '/static/famaskable_icon.png',
-    alt: 'TSKCOMPANY Logo',
+    url: '/static/favicon/maskable_icon.png',
+    alt: `${process.env.NEXT_PUBLIC_COMPANY_NAME} Maskable Logo`,
     width: 512,
     height: 512,
   },
@@ -55,14 +55,14 @@ export const defaultMetadata: Metadata = {
   bookmarks: [baseUrl + '/'],
   openGraph: {
     type: 'website',
-    siteName: 'TSKCOMPANY',
+    siteName: process.env.NEXT_PUBLIC_COMPANY_NAME!,
     title,
     description,
     url: baseUrl,
     images,
     locale: 'en_US',
     countryName: 'United States',
-    emails: ['TSKEMAIL'],
+    emails: [process.env.NEXT_PUBLIC_CONTACT_EMAIL!],
     ttl: 60 * 60 * 24 * 7, // 1 week
   },
   icons: {
@@ -79,16 +79,4 @@ export const defaultMetadata: Metadata = {
   //   description,
   //   images,
   // },
-  robots: {
-    follow: true,
-    index: true,
-    nocache: false,
-    noimageindex: false,
-    nosnippet: false,
-    notranslate: false,
-    noarchive: false,
-    'max-image-preview': 'large',
-    'max-snippet': -1,
-    'max-video-preview': -1,
-  },
 };
