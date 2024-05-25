@@ -175,6 +175,51 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 2. If you need a component visit [Shadcn UI](https://ui.shadcn.com/docs/components/accordion) and follow the installation instructions for the component you need.
 3. For documentation on a component from Shadcn UI visit their website, find the component, and view the API Reference.
 
+### Payload CMS
+
+Payload CMS allows us to easily provide a user facing admin dashboard for managing collections(database tables).
+
+1. Create a local postgres database with docker by running the _./start-database.sh_ command. Make sure to change the _DB_CONTAINER_NAME_ to the name of the project. located in _.env.example_ you should see _DATABASE_URI_ and _PAYLOAD_SECRET_ these are for developement ONLY. Make sure to also change the db name in the _DATABASE_URI_ variable to the name of the project.
+
+2. Visit _http://localhost:3000/admin_ to view the admin panel.
+
+3. Adding a new collection. There is a folder called _collections_, create a file named with the collection you wish to create ex: _Users.ts_. [Payload Fields](https://payloadcms.com/docs/fields/overview)
+
+```ts
+import type { CollectionConfig } from 'payload/types';
+
+export const Users: CollectionConfig = {
+  slug: 'users',
+  admin: {
+    useAsTitle: 'email',
+  },
+  auth: true,
+  fields: [
+    // Email added by default
+    // Add more fields as needed
+  ],
+};
+```
+
+4. If you need to query with payload here is an example request.
+
+```ts
+import configPromise from '@payload-config';
+import { getPayload } from 'payload';
+
+export const GET = async () => {
+  const payload = await getPayload({
+    config: configPromise,
+  });
+
+  const data = await payload.find({
+    collection: 'users',
+  });
+
+  return Response.json(data);
+};
+```
+
 ### Other Considerations
 
 #### Icons
