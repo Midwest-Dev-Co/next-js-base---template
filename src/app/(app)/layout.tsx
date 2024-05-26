@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 // import { Analytics } from '@vercel/analytics/react';
 
 // Metadata
-import { defaultMetadata } from './defaultMetadata';
+import { defaultMetadata } from '../defaultMetadata';
 
 // Fonts
 import { baskervville, inter } from '@/assets/fonts/googleFonts';
