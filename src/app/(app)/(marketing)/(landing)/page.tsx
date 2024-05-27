@@ -11,27 +11,27 @@ import FAQ from './FAQ';
 import BrandCloud from './BrandCloud';
 
 export default function LandingPage() {
-  return (
-    <Main>
-      <Hero />
+    return (
+        <Main>
+            <Hero />
 
-      <BrandCloud />
+            <BrandCloud />
 
-      <About />
+            <About />
 
-      <Services />
+            <Services />
 
-      <Portfolio />
+            <Portfolio />
 
-      <Testimonials />
+            <Testimonials />
 
-      <Articles />
+            <Articles />
 
-      <CTA />
+            <CTA />
 
-      <FAQ />
+            <FAQ />
 
-      <Contact />
-    </Main>
-  );
+            <Contact />
+        </Main>
+    );
 }

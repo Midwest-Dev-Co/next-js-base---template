@@ -1,13 +1,13 @@
 import Image, { ImageProps } from 'next/image';
 
 type ConditionalProps =
-  | { fill: true }
-  | { fill?: false; width: number; height: number };
+    | { fill: true }
+    | { fill?: false; width: number; height: number };
 
 type LazyImageProps = ConditionalProps &
-  ImageProps & {
-    blur?: boolean;
-  };
+    ImageProps & {
+        blur?: boolean;
+    };
 /**
  * LazyLocalImage is a component that loads images lazily with an optional blur effect.
  *
@@ -25,31 +25,31 @@ type LazyImageProps = ConditionalProps &
  * @returns {JSX.Element} The LazyLocalImage component.
  */
 export default function LazyImageLocal({
-  src,
-  alt,
-  width,
-  height,
-  blur = true,
-  fill = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  ...rest
+    src,
+    alt,
+    width,
+    height,
+    blur = true,
+    fill = false,
+    sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+    ...rest
 }: LazyImageProps): JSX.Element {
-  if (typeof src !== 'object') {
-    throw new Error('src must be a static import');
-  }
+    if (typeof src !== 'object') {
+        throw new Error('src must be a static import');
+    }
 
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      placeholder={blur ? 'blur' : 'empty'}
-      priority={false}
-      width={!fill ? width : undefined}
-      height={!fill ? height : undefined}
-      fill={fill ? fill : undefined}
-      loading="lazy"
-      sizes={sizes}
-      {...rest}
-    />
-  );
+    return (
+        <Image
+            src={src}
+            alt={alt}
+            placeholder={blur ? 'blur' : 'empty'}
+            priority={false}
+            width={!fill ? width : undefined}
+            height={!fill ? height : undefined}
+            fill={fill ? fill : undefined}
+            loading="lazy"
+            sizes={sizes}
+            {...rest}
+        />
+    );
 }

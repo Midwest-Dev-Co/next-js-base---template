@@ -6,17 +6,17 @@ import FeaturedArticles from '../articles/FeaturedArticles';
 import Timeline from './Timeline';
 
 export default function AboutPage() {
-  return (
-    <Main>
-      <Content />
+    return (
+        <Main>
+            <Content />
 
-      <Team />
+            <Team />
 
-      <Stats />
+            <Stats />
 
-      <Timeline />
+            <Timeline />
 
-      <FeaturedArticles />
-    </Main>
-  );
+            <FeaturedArticles />
+        </Main>
+    );
 }

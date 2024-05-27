@@ -8,32 +8,32 @@
 2. Clone the repository to your local machine.
 3. Open the project in your code editor.
 4. Run `yarn`
-   - If you haven't globally installed the `yarn` package manager, you can do so by running `npm install -g yarn`.
+    - If you haven't globally installed the `yarn` package manager, you can do so by running `npm install -g yarn`.
 
 ### Deployment
 
 _Note: If you aren't a team member on the Midwest Dev Co Vercel, message Will (will@midwestdevco.com)._
 
 1. Initialize the project with Vercel by running `yarn vercel-init`. This will take you through a series of prompts to set up your project.
-   - If you haven't globally installed the `vercel` CLI, you can do so by running `yarn global add vercel`.
-   - Login = Enter
-   - Select Project = Enter
-   - Link to Existing Project = N
-   - What's your project's name? = Enter
-   - In which directory is your code located? = Enter
-   - Want to override the settings? = N
-   - Wait for the project to deploy.
-   - What's the value of NEXT_PUBLIC_VERCEL_URL? = http://localhost:3000
-   - What's the value of NEXT_PUBLIC_COMPANY_NAME? = (whatever the name is)
-   - What Environments for NEXT_PUBLIC_COMPANY_NAME? = a (for all) -> enter
+    - If you haven't globally installed the `vercel` CLI, you can do so by running `yarn global add vercel`.
+    - Login = Enter
+    - Select Project = Enter
+    - Link to Existing Project = N
+    - What's your project's name? = Enter
+    - In which directory is your code located? = Enter
+    - Want to override the settings? = N
+    - Wait for the project to deploy.
+    - What's the value of NEXT_PUBLIC_VERCEL_URL? = http://localhost:3000
+    - What's the value of NEXT_PUBLIC_COMPANY_NAME? = (whatever the name is)
+    - What Environments for NEXT_PUBLIC_COMPANY_NAME? = a (for all) -> enter
 
 ### Assets
 
 _Note: All assets should be stored in the `/assets/**/*` directory._
 
 1. Add all images, illustrations, and icons to the `/assets/images` directory.
-   - All assets for a company will be found in our [Google Drive](https://drive.google.com/drive/my-drive) for that client.
-   - To create a logo, use [Canva](https://www.canva.com/), [Figma](https://www.figma.com/), or [ChatGPT Logo Extension](https://www.openai.com/chatgpt/).
+    - All assets for a company will be found in our [Google Drive](https://drive.google.com/drive/my-drive) for that client.
+    - To create a logo, use [Canva](https://www.canva.com/), [Figma](https://www.figma.com/), or [ChatGPT Logo Extension](https://www.openai.com/chatgpt/).
 2. Create a favicon using [Real Favicon Generator](https://realfavicongenerator.net/) and add it to the `/assets/icons/favicon` directory.
 3. Rename the `apple-touch-icon.png` to `apple-icon.png` and the `favicon-512x512.png` to `icon.png`.
 4. Create a maskable icon using [Maskable](https://maskable.app/editor), save it as 512x512, and add it to the `/assets/icons/favicon` directory and rename it to `maskable_icon.png`.
@@ -68,13 +68,13 @@ _Note: All assets should be stored in the `/assets/**/*` directory._
 2. Use the `LazyImage` component to lazy load images.
 3. Use the `Image` component with the `loading="lazy"` attribute to lazy load images.
 
-- Metadata
+-   Metadata
 
-  - Update Title
-  - Update Description
-  - Update Keywords
-  - ...
-  - https://metatags.io/
+    -   Update Title
+    -   Update Description
+    -   Update Keywords
+    -   ...
+    -   https://metatags.io/
 
 ---
 
@@ -84,17 +84,17 @@ _Note: All assets should be stored in the `/assets/**/*` directory._
 
 #### Main (/components/global/Main.tsx)
 
-- Whenever a layout or page needs to be wrapped in a main tag, use the Main component.
-- The Main component takes in a children prop which is the content that will be wrapped in the main tag.
+-   Whenever a layout or page needs to be wrapped in a main tag, use the Main component.
+-   The Main component takes in a children prop which is the content that will be wrapped in the main tag.
 
 ```tsx
-<Main className="my-24 relative max-w-5xl space-y-6">{children}</Main>
+<Main className="relative my-24 max-w-5xl space-y-6">{children}</Main>
 ```
 
 #### Section (/components/global/Section.tsx)
 
-- Whenever a layout or page needs to be wrapped in a section tag, use the Section component. It will keep spacing consistent throughout the application.
-- The Section component takes in a children prop which is the content that will be wrapped in the section tag.
+-   Whenever a layout or page needs to be wrapped in a section tag, use the Section component. It will keep spacing consistent throughout the application.
+-   The Section component takes in a children prop which is the content that will be wrapped in the section tag.
 
 ```tsx
 <Section className="bg-slate-900">{children}</Section>
@@ -108,53 +108,53 @@ _Note: All assets should be stored in the `/assets/**/*` directory._
 import LazyRemoteImage from '@/components/ui/LazyRemoteImage';
 
 export default function LandingPage() {
-  return (
-    <main>
-      <LazyRemoteImage />
-    </main>
-  );
+    return (
+        <main>
+            <LazyRemoteImage />
+        </main>
+    );
 }
 ```
 
 2. Make sure to add the required fields for the image component which are the src, alt, width, and height.
    The LazyRemoteImage component can take in a string value for the remote image. The LazyLocalImage can take in a static import for the value of the src
 
-- External Image
+-   External Image
 
 ```tsx
 import LazyRemoteImage from '@/components/ui/LazyRemoteImage';
 
 export default function LandingPage() {
-  return (
-    <main>
-      <LazyRemoteImage
-        src="https://images.unsplash.com/......."
-        alt="Background Image"
-        width={400}
-        height={300}
-      />
-    </main>
-  );
+    return (
+        <main>
+            <LazyRemoteImage
+                src="https://images.unsplash.com/......."
+                alt="Background Image"
+                width={400}
+                height={300}
+            />
+        </main>
+    );
 }
 ```
 
-- Local Image
+-   Local Image
 
 ```tsx
 import LazyLocalImage from '@/components/ui/LazyLocalImage';
 import ImageYouAreImporting from '@/assets/images/niceimage.png';
 
 export default function LandingPage() {
-  return (
-    <main>
-      <LazyLocalImage
-        src={ImageYouAreImporting}
-        alt="Your Image"
-        width={ImageYouAreImporting.width}
-        height={ImageYouAreImporting.height}
-      />
-    </main>
-  );
+    return (
+        <main>
+            <LazyLocalImage
+                src={ImageYouAreImporting}
+                alt="Your Image"
+                width={ImageYouAreImporting.width}
+                height={ImageYouAreImporting.height}
+            />
+        </main>
+    );
 }
 ```
 
@@ -164,13 +164,13 @@ Since Shadcn UI is pre-installed, you can directly use its components to build y
 
 1. Import the UI components you need. For example, to use a button component, you can do the following:
 
-   ```tsx
-   import { Button } from '@components/ui/button';
+    ```tsx
+    import { Button } from '@components/ui/button';
 
-   function HomePage() {
-     return <Button>Click Me</Button>;
-   }
-   ```
+    function HomePage() {
+        return <Button>Click Me</Button>;
+    }
+    ```
 
 2. If you need a component visit [Shadcn UI](https://ui.shadcn.com/docs/components/accordion) and follow the installation instructions for the component you need.
 3. For documentation on a component from Shadcn UI visit their website, find the component, and view the API Reference.
@@ -189,15 +189,15 @@ Payload CMS allows us to easily provide a user facing admin dashboard for managi
 import type { CollectionConfig } from 'payload/types';
 
 export const Users: CollectionConfig = {
-  slug: 'users',
-  admin: {
-    useAsTitle: 'email',
-  },
-  auth: true,
-  fields: [
-    // Email added by default
-    // Add more fields as needed
-  ],
+    slug: 'users',
+    admin: {
+        useAsTitle: 'email',
+    },
+    auth: true,
+    fields: [
+        // Email added by default
+        // Add more fields as needed
+    ],
 };
 ```
 
@@ -208,15 +208,15 @@ import configPromise from '@payload-config';
 import { getPayload } from 'payload';
 
 export const GET = async () => {
-  const payload = await getPayload({
-    config: configPromise,
-  });
+    const payload = await getPayload({
+        config: configPromise,
+    });
 
-  const data = await payload.find({
-    collection: 'users',
-  });
+    const data = await payload.find({
+        collection: 'users',
+    });
 
-  return Response.json(data);
+    return Response.json(data);
 };
 ```
 
@@ -229,97 +229,97 @@ export const GET = async () => {
 
 #### Color Palettes
 
-- https://coolors.co/
-- https://colorhunt.co/
+-   https://coolors.co/
+-   https://colorhunt.co/
 
 #### Fonts
 
-- https://fonts.google.com/
+-   https://fonts.google.com/
 
 #### Illustrations
 
-- https://undraw.co/
-- https://www.drawkit.io/
-- https://www.humaaans.com/
-- https://www.opendoodles.com/
-- https://www.manypixels.co/gallery/
-- https://www.pixeltrue.com/free-illustrations
-- https://www.illlustrations.co/
+-   https://undraw.co/
+-   https://www.drawkit.io/
+-   https://www.humaaans.com/
+-   https://www.opendoodles.com/
+-   https://www.manypixels.co/gallery/
+-   https://www.pixeltrue.com/free-illustrations
+-   https://www.illlustrations.co/
 
 #### SEO
 
-- https://www.semrush.com/
-- https://www.ahrefs.com/
-- https://neilpatel.com/seo-analyzer/
+-   https://www.semrush.com/
+-   https://www.ahrefs.com/
+-   https://neilpatel.com/seo-analyzer/
 
 #### Accessibility
 
-- https://wave.webaim.org/
-- https://www.tpgi.com/axe/
-- LightHouse
+-   https://wave.webaim.org/
+-   https://www.tpgi.com/axe/
+-   LightHouse
 
 #### Performance
 
-- https://web.dev/measure/
-- https://gtmetrix.com/
-- https://www.webpagetest.org/
+-   https://web.dev/measure/
+-   https://gtmetrix.com/
+-   https://www.webpagetest.org/
 
 ---
 
 ## Features
 
-- [x] Landing Page (Component Structure)
-- [x] Terms and Conditions Page
-- [x] Privacy Policy Page
-- [x] Logo Components
-- [x] Contact Page (Component Structure)
-- [x] About Page (Component Structure)
-- [x] Support Page (Component Structure)
-- [ ] Blogs & Blog Pages
-- [ ] Exit Intent Popup
-- [ ] Chatbot
-- [ ] Newsletter Signup
-- [ ] Optimized SEO
+-   [x] Landing Page (Component Structure)
+-   [x] Terms and Conditions Page
+-   [x] Privacy Policy Page
+-   [x] Logo Components
+-   [x] Contact Page (Component Structure)
+-   [x] About Page (Component Structure)
+-   [x] Support Page (Component Structure)
+-   [ ] Blogs & Blog Pages
+-   [ ] Exit Intent Popup
+-   [ ] Chatbot
+-   [ ] Newsletter Signup
+-   [ ] Optimized SEO
 
 ---
 
 ## Technologies
 
-- [x] NextJS
-- [x] TypeScript
-- [x] Tailwind CSS
-- [x] Shadcn UI
-- [x] Lucide Icons
-- [x] SendGrid
-- [ ] Payload (CMS)
-- [ ] Next Theme
-- [ ] Stripe
-- [ ] Calendly
-- [ ] Analytics (Vercel)
-- [ ] Clearbit
+-   [x] NextJS
+-   [x] TypeScript
+-   [x] Tailwind CSS
+-   [x] Shadcn UI
+-   [x] Lucide Icons
+-   [x] SendGrid
+-   [ ] Payload (CMS)
+-   [ ] Next Theme
+-   [ ] Stripe
+-   [ ] Calendly
+-   [ ] Analytics (Vercel)
+-   [ ] Clearbit
 
 ---
 
 ## Docs / Dev Environment
 
-- [x] Vercel Deployment and Environment Variables
-- [x] Image Optimization
-- [x] Recommended Extensions
-- [ ] New File Creation (Component, Page, etc. w/ Snippets)
-  - Naming Convensions
-  - Comments
-  - Imports
-  - Exports
-  - Component Structure
-  - Props
-- [ ] Testing Performance & Accessibility (Lighthouse, GTMetrix, WebPageTest)
-- [ ] Fonts & Typography
-- [ ] SEO Optimization
-- [ ] Analytics & Tracking
+-   [x] Vercel Deployment and Environment Variables
+-   [x] Image Optimization
+-   [x] Recommended Extensions
+-   [ ] New File Creation (Component, Page, etc. w/ Snippets)
+    -   Naming Convensions
+    -   Comments
+    -   Imports
+    -   Exports
+    -   Component Structure
+    -   Props
+-   [ ] Testing Performance & Accessibility (Lighthouse, GTMetrix, WebPageTest)
+-   [ ] Fonts & Typography
+-   [ ] SEO Optimization
+-   [ ] Analytics & Tracking
 
 ## Domains
 
-- process.env.NEXT_PUBLIC_VERCEL_URL
+-   process.env.NEXT_PUBLIC_VERCEL_URL
 
 ## About Them
 
@@ -327,21 +327,21 @@ TSKABOUT
 
 ## Vibe
 
-- TSKVIBE
+-   TSKVIBE
 
 ## Inspiration
 
-- TSKINSPIRATION
+-   TSKINSPIRATION
 
 ## Press
 
-- PUBLICATION: [TSK](TSKLINK)
-- INTERVIEW: [TSK](TSKLINK)
+-   PUBLICATION: [TSK](TSKLINK)
+-   INTERVIEW: [TSK](TSKLINK)
 
 ## Ideas
 
-- TSK
+-   TSK
 
 ## Contact
 
-- process.env.NEXT_PUBLIC_CONTACT_EMAIL
+-   process.env.NEXT_PUBLIC_CONTACT_EMAIL

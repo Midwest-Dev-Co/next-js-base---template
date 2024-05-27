@@ -19,48 +19,52 @@ import Footer from '@/components/ui/footer/Footer';
 
 // * Dynamic Imports
 const Toaster = dynamic(() => import('@/components/containers/Toaster'), {
-  ssr: false,
+    ssr: false,
 });
 
 // * Props
 interface IProps {
-  children: React.ReactNode;
-  modal: React.ReactNode;
+    children: React.ReactNode;
+    modal: React.ReactNode;
 }
 
 // * Component
 export default function RootLayout({ children, modal }: IProps) {
-  return (
-    <html
-      lang="en"
-      className={cn(inter.variable, baskervville.variable, lexend.variable)}
-    >
-      <body suppressHydrationWarning>
-        {/* Navigation */}
-        <Navigation />
+    return (
+        <html
+            lang="en"
+            className={cn(
+                inter.variable,
+                baskervville.variable,
+                lexend.variable
+            )}
+        >
+            <body suppressHydrationWarning>
+                {/* Navigation */}
+                <Navigation />
 
-        {/* Children */}
-        {children}
+                {/* Children */}
+                {children}
 
-        {/* Footer */}
-        <Footer />
+                {/* Footer */}
+                <Footer />
 
-        {/* Modal */}
-        {/* {modal} */}
+                {/* Modal */}
+                {/* {modal} */}
 
-        {/* Toast Container */}
-        <Toaster />
+                {/* Toast Container */}
+                <Toaster />
 
-        {/* Analytics */}
-        {/* <Analytics /> */}
-      </body>
-    </html>
-  );
+                {/* Analytics */}
+                {/* <Analytics /> */}
+            </body>
+        </html>
+    );
 }
 
 // * Metadata & Viewport
 export const viewport: Viewport = {
-  themeColor: '#FFFFFF', // TSKCOLOR
+    themeColor: '#FFFFFF', // TSKCOLOR
 };
 
 export const metadata = defaultMetadata;
