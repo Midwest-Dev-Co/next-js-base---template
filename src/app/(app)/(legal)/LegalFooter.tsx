@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LogoHorizontal from '@/components/ui/logo/LogoHorizontal';
+import LogoHorizontal from '@/components/global/logo/LogoHorizontal';
 
 export default function SimpleFooter() {
     return (

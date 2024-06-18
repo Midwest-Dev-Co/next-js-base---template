@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
-interface IGlobalStore {
-    tsk: string;
-    setTSK: (tsk: string) => void;
+interface INavStore {
+    isMobileOpen: boolean;
+    setMobileOpen: (newMenuStatus: boolean) => void;
 }
 
-export const useNavStore = create<IGlobalStore>((set) => ({
-    tsk: 'tsk',
-    setTSK: (tsk: string) => set({ tsk }),
+export const useNavStore = create<INavStore>((set) => ({
+    isMobileOpen: false,
+    setMobileOpen: (newMenuStatus) => set({ isMobileOpen: newMenuStatus }),
 }));

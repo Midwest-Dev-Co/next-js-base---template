@@ -14,22 +14,17 @@ import { baskervville, inter } from '@/assets/fonts/googleFonts';
 import { lexend } from '@/assets/fonts/localFonts';
 import { cn } from '@/lib/utils';
 import { Viewport } from 'next';
-import Navigation from '@/components/ui/navigation/Navigation';
-import Footer from '@/components/ui/footer/Footer';
+import Navigation from '@/components/global/navigation/Navigation';
+import Footer from '@/components/global/footer/Footer';
+import { PropsWithChildren } from 'react';
 
 // * Dynamic Imports
 const Toaster = dynamic(() => import('@/components/containers/Toaster'), {
     ssr: false,
 });
 
-// * Props
-interface IProps {
-    children: React.ReactNode;
-    modal: React.ReactNode;
-}
-
 // * Component
-export default function RootLayout({ children, modal }: IProps) {
+export default function RootLayout({ children }: PropsWithChildren) {
     return (
         <html
             lang="en"
@@ -48,9 +43,6 @@ export default function RootLayout({ children, modal }: IProps) {
 
                 {/* Footer */}
                 <Footer />
-
-                {/* Modal */}
-                {/* {modal} */}
 
                 {/* Toast Container */}
                 <Toaster />

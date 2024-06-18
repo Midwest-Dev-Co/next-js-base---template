@@ -1,7 +1,6 @@
 import { createSafeActionClient } from 'next-safe-action';
 import nodemailer from 'nodemailer';
 import nodemailerSendgrid from 'nodemailer-sendgrid';
-import { SendEmailOptions } from 'payload/types';
 
 export function sendgrid() {
     return 'sendgrid';
@@ -20,7 +19,7 @@ export const sendGridEmailAdapter = () => {
         name: 'Admin',
         defaultFromAddress: 'support@midwestdevco.com',
         defaultFromName: 'Admin',
-        sendEmail: async (message: SendEmailOptions) => {
+        sendEmail: async (message: any) => {
             return transporter.sendMail({
                 ...message,
                 from: `${message.sender || 'Admin'}`,

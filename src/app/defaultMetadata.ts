@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 const title = 'TSKSLOGAN | ' + process.env.NEXT_PUBLIC_COMPANY_NAME;
 const description = 'TSKDESCRIPTION';
-const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL!;
+const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL! || 'http://localhost:3000';
 
 const images = [
     {

@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 
-import LogoSquare from '@/components/ui/logo/LogoSquare';
+import LogoSquare from '@/components/global/logo/LogoSquare';
 import Main from '@/components/containers/Main';
 import SimpleFooter from './LegalFooter';
 
@@ -14,7 +14,10 @@ export default function LegalLayout({ children }: PropsWithChildren) {
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">
-                        <Link href="/" className="-m-1.5 p-1.5">
+                        <Link
+                            href="/"
+                            className="-m-1.5 p-1.5"
+                        >
                             <span className="sr-only">
                                 {process.env.NEXT_PUBLIC_COMPANY_NAME}
                             </span>
