@@ -20,7 +20,18 @@ export default function SimpleFooter() {
                     month: 'long',
                     day: 'numeric',
                 })}{' '}
-                - {process.env.NEXT_PUBIC_COMPANY_NAME}. All rights reserved.
+                - {process.env.NEXT_PUBIC_COMPANY_NAME}. All rights reserved.{' '}
+                <span className="block">
+                    Website Designed & Built by{' '}
+                    <a
+                        href="https://midwestdevco.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-blue-600 hover:text-blue-800"
+                    >
+                        Midwest Dev Co, LLC
+                    </a>
+                </span>
             </p>
 
             {/* Address */}
